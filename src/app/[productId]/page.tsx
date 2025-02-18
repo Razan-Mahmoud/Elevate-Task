@@ -13,8 +13,8 @@ export default async function ProductDetails({
     params: Promise<{ productId: number }>;
 }) {
     const productId = (await params).productId;
-    let res = await fetch(`https://fakestoreapi.com/products/${productId}`);
-    let data: Product = await res.json()
+    const res = await fetch(`https://fakestoreapi.com/products/${productId}`);
+    const data: Product = await res.json()
      console.log(data)
 
     return (
