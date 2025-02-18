@@ -1,13 +1,13 @@
 This is a simple website that has a Product Gallery and a Product Details pages. It's done as a prerequisit task to enroll at an Advanced Frontendd Bootcamp from Elevate Agency.
-You can find the website [here](https://razan-mahmoud.github.io/elevate-task/).
+
+## A live demo link is found [here](https://razan-mahmoud.github.io/elevate-task/).
 
 It is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ##To Clone the repo and use it locally:
 Follow these instructions [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-## Getting Started with Next.JS
-
+##Getting Started with Next.Js
 First, run the development server:
 
 ```bash
