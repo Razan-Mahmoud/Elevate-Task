@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Product = {
     id:          number;
     title:       string;
@@ -30,7 +32,7 @@ export default async function ProductDetails({
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2  items-center mx-6 my-3">
             <div className="col-span-1 p-2">
-                <img className="w-full" src={data.image} alt={data.title} />
+                <Image className="w-full" src={data.image} alt={data.title} />
             </div>
             <div className="col-span-2 p-5">
                 <h3 className="font-semibold text-2xl mb-3">{data.title}</h3>

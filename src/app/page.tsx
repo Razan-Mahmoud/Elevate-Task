@@ -1,5 +1,6 @@
 
 
+import Image from "next/image";
 import Link from "next/link";
 
 type AllProducts = [{
@@ -25,7 +26,7 @@ export default async function getAllProducts() {
           {data?.map((element) => {
             return (
               <Link href={`/${element.id}`} key={element.id} className=" rounded   col-span-1 border border-green-100 p-2 cursor-pointer">
-                <img src={element?.image} className="w-[75%] my-2" alt="" />
+                <Image src={element?.image} className="w-[75%] my-2" alt="" />
                 <h2 className="font-semibold">{element?.title.split(" ").slice(0, 2).join(" ")}</h2>
                 <p className="mt-1 text-slate-500"><span className="font-semibold text-green-600">Price: </span>{element?.price} LE</p>
                 <p className="mt-1 text-slate-500"><span className="font-semibold text-green-600">Descriptions: </span>{element?.description.split(" ").slice(0, 5).join(" ")}</p>
