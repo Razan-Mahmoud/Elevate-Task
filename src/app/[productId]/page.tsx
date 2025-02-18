@@ -7,12 +7,22 @@ type Product = {
     image:       string;
 }
 
+
+export async function generateStaticParams() {
+    const products = await fetch('https://fakestoreapi.com/products')
+    .then((res) => res.json())
+   
+    return products.map((element: any) => ({
+        productId: element.id.toString(),
+    }))
+  }
+
 export default async function ProductDetails({
     params,
 }: {
     params: Promise<{ productId: number }>;
 }) {
-    const productId = (await params).productId;
+    const {productId} = await params;
     const res = await fetch(`https://fakestoreapi.com/products/${productId}`);
     const data: Product = await res.json()
      console.log(data)
